@@ -69,8 +69,6 @@ class Homepage extends Component {
   }
 }
 
-
-
 const mapStateToProps = state => ({
   loggedInUser: state.loggedInUser,
   displayname: state.userData.displayName,
