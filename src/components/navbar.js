@@ -5,32 +5,6 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Navbar extends React.Component {
-  // option1:
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     isHidden: true
-  //   };
-  // }
-  // toggleHiddenNavbar = event => {
-  //   this.setState({
-  //     isHidden: !this.state.isHidden
-  //   });
-  // };
-  // USING THIS onClick in the Link tags-> onClick={this.toggleHiddenNavbar.bind(this)}
-  // And a JS object where the child links would go-> {!this.state.isHidden && <NameOfChildComponent/>}
-  // This Child Component would be the li tags containing Link tag
-
-  // Option2
-  // handleNavbar = event => {
-  //   const newNavbar = this.props.filter(pathName => {
-  //     if (pathName.pathname === "/")
-  //   })
-  // }
-
-  // Option3
-  // Use ternary statement with css visibility prop
-  // ISSUE WITH THIS CHOICCE IS IT LEAVES TERRIBLE SPACING BETWEEN BUTTONS
 
   render() {
     console.log(this.props.pathname);

@@ -6,7 +6,7 @@ import {
   TO_REGISTER
 } from "../Redux/types";
 
-const api = "https://kwitter-api.herokuapp.com";
+const api = "https://jhoelzer-kwitter.herokuapp.com";
 
 export const userLogin = (username, password) => dispatch => {
   dispatch(isLoggingIn());

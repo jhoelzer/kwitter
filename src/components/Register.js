@@ -127,17 +127,6 @@ class Register extends Component {
           </Form.Field>
           <Button
             className="submit-button"
-            // style={{
-            //     margin: "auto",
-            //     textAlign: "center",
-            //     height: "40px",
-            //     width: "40%",
-            //     marginLeft: "30%",
-            //     marginRight: "30%",
-            //     color: "white",
-            //     backgroundColor: "#A00099"
-            // }}
-            // type="submit"
             onClick={this.handleRegister}
           >
             Register

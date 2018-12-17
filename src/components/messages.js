@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import List from './list.js';
 import { getUserByID } from "../Actions/homepageAction.js";
 
-
 const PHOTO_LIST_URL = "https://picsum.photos/list";
 
 class Messages extends Component {
 
   state = { messages: [] }
   componentDidMount = () => {
-    fetch("https://kwitter-api.herokuapp.com/messages",
+    fetch("https://jhoelzer-kwitter.herokuapp.com/messages",
       {
         method: 'GET',
         headers: {
@@ -31,7 +30,7 @@ class Messages extends Component {
         this.setState({ photos })
       });
 
-      fetch("https://kwitter-api.herokuapp.com/users", 
+      fetch("https://jhoelzer-kwitter.herokuapp.com/users", 
       {
         method: 'GET',
         headers: {
@@ -46,22 +45,14 @@ class Messages extends Component {
         })
         // dispatch(getUserByID())
       })
-      
-
   }
-
-  
 
   messagesSortedByDate = (messages) => {
     return messages.sort((a, b) => Date.parse(b.createdAt) - Date.parse(a.createdAt))
   }
 
-
   render() {
     const { photos = [] } = this.state;
-    
-
-    ;
     // console.log(this.state)
     return (
       <React.Fragment>
@@ -82,9 +73,5 @@ class Messages extends Component {
     );
   };
 };
-
-
-
-  
 
   export default Messages

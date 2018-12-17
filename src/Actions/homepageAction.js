@@ -11,7 +11,7 @@ export const getUserByID = () => (dispatch, getstate) => {
 
   const userID = getstate().profile.id;
 
-  fetch("https://kwitter-api.herokuapp.com/users/" + userID)
+  fetch("https://jhoelzer-kwitter.herokuapp.com/users/" + userID)
     .then(res => {
       if (!res.ok) {
         res.json().then(err => {

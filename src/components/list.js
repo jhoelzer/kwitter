@@ -10,7 +10,7 @@ class List extends React.Component {
   state = { users: [] }
 
   componentDidMount() {
-    fetch("https://kwitter-api.herokuapp.com/users", 
+    fetch("https://jhoelzer-kwitter.herokuapp.com/users", 
       {
         method: 'GET',
         headers: {
@@ -73,8 +73,6 @@ class List extends React.Component {
     const likeTweet = like(this.props.messageId);
     const dMessage = deleteMessage(this.props.messageId);
     
-    
-
     return (
       
       <React.Fragment>
@@ -113,7 +111,6 @@ class List extends React.Component {
 const mapStateToProps = state => ({
   username: state.userData.username,
 })
-
 
 export default connect(
   mapStateToProps,

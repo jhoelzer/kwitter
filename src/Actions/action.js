@@ -16,14 +16,14 @@ import { store } from "../Redux/store";
 
 export const GET_MESSAGES = "GET_MESSAGES";
 export const ADD_TWEET = "ADD_TWEET";
-const api = "https://kwitter-api.herokuapp.com";
+const api = "https://jhoelzer-kwitter.herokuapp.com";
 
 export const register = registerData => dispatch => {
   dispatch({
     type: REGISTER
   });
 
-  fetch("https://kwitter-api.herokuapp.com/auth/register", {
+  fetch("https://jhoelzer-kwitter.herokuapp.com/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -66,7 +66,7 @@ export const loginLink = () => {
 export const addTweet = ({ message }) => (dispatch, getState) => {
   axios({
     method: "POST",
-    url: "https://kwitter-api.herokuapp.com/messages",
+    url: "https://jhoelzer-kwitter.herokuapp.com/messages",
     headers: {
       Authorization: "Bearer " + getState().profile.token,
       "Content-Type": "application/json",
@@ -84,7 +84,7 @@ export const addTweet = ({ message }) => (dispatch, getState) => {
 export function getMessages() {
   return function(dispatch) {
     axios
-      .get("https://kwitter-api.herokuapp.com/messages?limit=1000&offset=0")
+      .get("https://jhoelzer-kwitter.herokuapp.com/messages?limit=1000&offset=0")
       .then(res => {
         if (res.statusText === "OK") {
           dispatch({

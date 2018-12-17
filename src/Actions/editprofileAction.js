@@ -32,7 +32,7 @@ export const editProfile = (password, displayName, about) => dispatch => {
   if (displayName) changes["displayName"] = displayName;
   if (about) changes["about"] = about;
 
-  fetch("https://kwitter-api.herokuapp.com/users", {
+  fetch("https://jhoelzer-kwitter.herokuapp.com/users", {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
