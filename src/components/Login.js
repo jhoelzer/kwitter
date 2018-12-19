@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, Header, Message } from 'semantic-ui-react';
 import "../styling/main.css"
-import { userLogin }  from '../Actions/action.js'
+import { userLogin, registerLink }  from '../Actions/action.js'
 import { connect } from "react-redux"
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
